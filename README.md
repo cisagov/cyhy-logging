@@ -1,24 +1,16 @@
-# cyhy-logging #
+# cyhy-logging 🪵 #
 
 [![GitHub Build Status](https://github.com/cisagov/cyhy-logging/workflows/build/badge.svg)](https://github.com/cisagov/cyhy-logging/actions)
 [![CodeQL](https://github.com/cisagov/cyhy-logging/workflows/CodeQL/badge.svg)](https://github.com/cisagov/cyhy-logging/actions/workflows/codeql-analysis.yml)
 [![Coverage Status](https://coveralls.io/repos/github/cisagov/cyhy-logging/badge.svg?branch=develop)](https://coveralls.io/github/cisagov/cyhy-logging?branch=develop)
 [![Known Vulnerabilities](https://snyk.io/test/github/cisagov/cyhy-logging/develop/badge.svg)](https://snyk.io/test/github/cisagov/cyhy-logging)
 
-This is a generic skeleton project that can be used to quickly get a
-new [cisagov](https://github.com/cisagov) Python library GitHub
-project started.  This skeleton project contains [licensing
-information](LICENSE), as well as
-[pre-commit hooks](https://pre-commit.com) and
-[GitHub Actions](https://github.com/features/actions) configurations
-appropriate for a Python library project.
+This is a Python package that provides a standard logging configuration which is
+used by the Cyber Hygiene system.
 
-## New Repositories from a Skeleton ##
+## Usage ##
 
-Please see our [Project Setup guide](https://github.com/cisagov/development-guide/tree/develop/project_setup)
-for step-by-step instructions on how to start a new repository from
-a skeleton. This will save you time and effort when configuring a
-new repository!
+<!-- TODO: add usage -->
 
 ## Contributing ##
 
