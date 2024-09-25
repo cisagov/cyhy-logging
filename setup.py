@@ -42,7 +42,7 @@ def get_version(version_file):
 
 
 setup(
-    name="cyhy_logging",
+    name="cyhy-logging",
     # Versions should comply with PEP440
     version=get_version("src/cyhy_logging/_version.py"),
     description="CyHy Logging Python library",
