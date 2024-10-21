@@ -57,8 +57,8 @@ setup(
         "Tracker": "https://github.com/cisagov/cyhy-logging/issues",
     },
     # Author details
-    author="Cybersecurity and Infrastructure Security Agency",
-    author_email="github@cisa.dhs.gov",
+    author="Mark Feldhousen",
+    author_email="mark.feldhousen@gwe.cisa.dhs.gov",
     license="License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -66,7 +66,7 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         # Indicate who your project is intended for
         "Intended Audience :: Developers",
         # Pick your license as you wish (should match "license" above)
