@@ -76,6 +76,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Programming Language :: Python :: Implementation :: CPython",
     ],
     python_requires=">=3.12",
@@ -88,13 +89,22 @@ setup(
     include_package_data=True,
     install_requires=["rich", "setuptools"],
     extras_require={
+        # IMPORTANT: Keep type hinting-related dependencies of the dev section
+        # in sync with the mypy pre-commit hook configuration (see
+        # .pre-commit-config.yaml). Any changes to type hinting-related
+        # dependencies here should be reflected in the additional_dependencies
+        # field of the mypy pre-commit hook to avoid discrepancies in type
+        # checking between environments.
+        "dev": [
+            "types-setuptools",
+        ],
         "test": [
             "coverage",
             "coveralls",
             "pre-commit",
             "pytest-cov",
             "pytest",
-        ]
+        ],
     },
     entry_points={},
 )
