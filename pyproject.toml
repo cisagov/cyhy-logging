@@ -35,7 +35,7 @@ dependencies = [
 ]
 description = "CyHy Logging Python library"
 dynamic = ["readme", "version"]
-keywords = ["skeleton"]
+keywords = ["cyhy", "logging"]
 license = "CC0-1.0"
 name = "cyhy-logging"
 requires-python = ">=3.12"
