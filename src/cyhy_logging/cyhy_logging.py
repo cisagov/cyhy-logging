@@ -2,7 +2,6 @@
 
 # Standard Python Libraries
 import logging
-from typing import Optional
 
 # Third-Party Libraries
 from rich.logging import RichHandler
@@ -12,7 +11,7 @@ from . import CYHY_ROOT_LOGGER
 from .log_filters import RedactPasswordFilter
 
 
-def setup_logging(log_level: Optional[str] = None) -> None:
+def setup_logging(log_level: str | None = None) -> None:
     """Set up logging for the CyHy namespace."""
     # If a log_level is provided, ensure it is uppercase
     if log_level:
