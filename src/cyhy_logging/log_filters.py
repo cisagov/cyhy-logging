@@ -11,8 +11,9 @@ class RedactPasswordFilter(logging.Filter):
     """
     A logging filter that redacts passwords from URLs in log messages.
 
-    This filter scans log messages for URLs and redacts any passwords found in the userinfo part of the URL.
-    It ensures that sensitive information is not logged in plain text.
+    This filter scans log messages for URLs and redacts any passwords
+    found in the userinfo part of the URL.  It ensures that sensitive
+    information is not logged in plain text.
 
     Attributes:
         url_pattern (re.Pattern): A compiled regular expression pattern to match URLs.
@@ -53,7 +54,8 @@ class RedactPasswordFilter(logging.Filter):
         # Create a shallow copy of the record only if modification is needed
         new_record = copy.copy(record)
 
-        # Update the message and clear args since we are directly setting the final message
+        # Update the message and clear args since we are directly
+        # setting the final message
         new_record.msg = redacted_message
         new_record.args = None
 
@@ -63,7 +65,8 @@ class RedactPasswordFilter(logging.Filter):
         """
         Redact passwords from URLs in the given message.
 
-        This method scans the message for URLs and replaces any passwords in the userinfo part with '****'.
+        This method scans the message for URLs and replaces any
+        passwords in the userinfo part with '****'.
 
         Args:
             message (str): The log message to be processed.
@@ -76,6 +79,10 @@ class RedactPasswordFilter(logging.Filter):
             userinfo = match.group("userinfo")
             if userinfo:
                 userinfo = re.sub(r":[^@]*", ":****", userinfo)
-            return f"{match.group('scheme')}{userinfo or ''}{match.group('host')}{match.group('port') or ''}{match.group('path') or ''}"
+            return (
+                f"{match.group('scheme')}{userinfo or ''}"
+                f"{match.group('host')}{match.group('port') or ''}"
+                f"{match.group('path') or ''}"
+            )
 
         return self.url_pattern.sub(replace, message)

@@ -59,7 +59,8 @@ def test_redact_password_filter_multiple_urls():
         level=logging.INFO,
         pathname="test_path",
         lineno=1,
-        msg="Accessing https://user:secret@example.com/resource and https://admin:password@admin.example.com/admin",
+        msg="Accessing https://user:secret@example.com/resource and "
+        "https://admin:password@admin.example.com/admin",
         args=None,
         exc_info=None,
     )
@@ -72,7 +73,8 @@ def test_redact_password_filter_multiple_urls():
 
     # Both passwords should be redacted
     assert new_record.msg == (
-        "Accessing https://user:****@example.com/resource and https://admin:****@admin.example.com/admin"
+        "Accessing https://user:****@example.com/resource and "
+        "https://admin:****@admin.example.com/admin"
     )
 
 
